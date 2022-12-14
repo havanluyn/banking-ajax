@@ -45,7 +45,7 @@ public class CustomerServiceImpl implements ICustomerService {
         deposit.setCustomer(customer);
         depositRepository.save(deposit);
         BigDecimal newBalance = deposit.getTransactionAmount();
-        incrementBalance(customer, newBalance);
+        customerRepository.incrementBalance(customer.getId(), newBalance);
     }
 
     @Override
@@ -54,22 +54,22 @@ public class CustomerServiceImpl implements ICustomerService {
         deposit.setCustomer(customer);
         depositRepository.save(deposit);
         BigDecimal newBalance = deposit.getTransactionAmount();
-        reduceBalance(customer, newBalance);
+        customerRepository.reduceBalance(customer.getId(), newBalance);
     }
 
-    @Override
-    public void incrementBalance(Customer customer, BigDecimal balance) {
-        BigDecimal newBalance = balance.add(customer.getBalance());
-        customer.setBalance(newBalance);
-        save(customer);
-    }
+//    @Override
+//    public void incrementBalance(Customer customer, BigDecimal balance) {
+//        BigDecimal newBalance = balance.add(customer.getBalance());
+//        customer.setBalance(newBalance);
+//        save(customer);
+//    }
 
-    @Override
-    public void reduceBalance(Customer customer, BigDecimal balance) {
-        BigDecimal newBalance = customer.getBalance().subtract(balance);
-        customer.setBalance(newBalance);
-        save(customer);
-    }
+//    @Override
+//    public void reduceBalance(Customer customer, BigDecimal balance) {
+//        BigDecimal newBalance = customer.getBalance().subtract(balance);
+//        customer.setBalance(newBalance);
+//        save(customer);
+//    }
 
     @Override
     public List<Customer> findAllAndIdNotExists(Long id) {
@@ -80,8 +80,8 @@ public class CustomerServiceImpl implements ICustomerService {
     public void transfer(Transfer transfer) {
         BigDecimal transferAmount = transfer.getTransferAmount();
         BigDecimal transactionAmount = transfer.getTransactionAmount();
-        reduceBalance(transfer.getSender(), transactionAmount);
-        incrementBalance(transfer.getRecipient(), transferAmount);
+        customerRepository.reduceBalance(transfer.getSender().getId(), transactionAmount);
+        customerRepository.incrementBalance(transfer.getRecipient().getId(), transferAmount);
         transferRepository.save(transfer);
     }
 

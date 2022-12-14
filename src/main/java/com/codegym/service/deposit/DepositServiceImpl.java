@@ -20,7 +20,7 @@ public class DepositServiceImpl implements IDepositService {
 
     @Override
     public List<Deposit> findAll() {
-        return null;
+        return depositRepository.findAll();
     }
 
     @Override

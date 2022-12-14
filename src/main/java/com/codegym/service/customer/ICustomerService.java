@@ -14,8 +14,8 @@ public interface ICustomerService extends IGeneralService<Customer> {
     List<Customer> findAllByFullNameLikeOrEmailLikeOrPhoneLike(String fullName, String email, String phone);
     void deposit(Deposit deposit, Customer customer);
     void withdraw(Deposit deposit, Customer customer);
-     void incrementBalance(Customer customer, BigDecimal balance);
-    void reduceBalance(Customer customer,BigDecimal balance);
+//     void incrementBalance(Customer customer, BigDecimal balance);
+//    void reduceBalance(Customer customer,BigDecimal balance);
     List<Customer> findAllAndIdNotExists(Long id);
     Optional<Customer> findByEmail(String email);
     Optional<Customer> findByEmailAndIdIsNot(String email,Long id);

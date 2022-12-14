@@ -69,7 +69,7 @@
                         <input type="hidden" id="customerIdUp">
                         <div class="col-md-6">
                             <label for="fullnameUp" class="form-label">Full name</label>
-                            <input type="text" class="form-control" id="fullnameUp" name="fullNameUp">
+                            <input type="text" class="form-control" id="fullnameUp" name="fullnameUp">
                         </div>
                         <div class="col-md-6">
                             <label for="emailUp" class="form-label">Email</label>
@@ -285,6 +285,8 @@
     function showUpdateCustomer(){
         $(".showUpdate").on("click", function () {
             let idCus = $(this).data("id");
+            $("#emailUp-error").hide();
+            $("#fullnameUp-error").hide();
             $.ajax({
                 "headers": {
                     "accept": "application/json",
@@ -346,7 +348,7 @@
     function showDepositBalance(){
         $(".showDeposit").on("click", function () {
             let idCus = $(this).data("id");
-
+            $("#balanceDe-error").hide();
             $.ajax({
                 "headers": {
                     "accept": "application/json",
@@ -379,7 +381,7 @@
         let deposit={
             id:null,
             customerId: idCus,
-            balance:parseInt( page.dialogs.elements.balanceDe.val())
+            transactionAmount:parseInt( page.dialogs.elements.balanceDe.val())
         }
         createDeposit(deposit);
         $.ajax({
@@ -410,7 +412,7 @@
                 "content-type": "application/json"
             },
             type: "POST",
-            url: "http://localhost:3000/deposit",
+            url: "http://localhost:8080/deposit",
             data: JSON.stringify(deposit)
         })
             .done((data) => {
@@ -423,6 +425,7 @@
     function showWithDrawBalance(){
         $(".showWithdraw").on("click", function () {
             let idCus = $(this).data("id");
+            $("#balanceWd-error").hide();
             $.ajax({
                 "headers": {
                     "accept": "application/json",
@@ -516,7 +519,6 @@
     }
 
     function handleClickDeleteButton(id) {
-
         console.log(id);
         $.ajax({
             "headers": {
@@ -572,13 +574,13 @@
             }
         },
         messages: {
-            fullNameCre: {
-                required: "Vui long nhap ho ten",
-                minlength: "Do dai ho ten khong qua 5 ky tu",
+            fullnameCre: {
+                required: "Tên không được để trống",
+                minlength: "Họ tên có ít nhất 5 kí tự",
             },
             emailCre: {
-                required: "Vui long nhap email",
-                email: "Email khong dung dinh dang",
+                required: "Email không được để trống",
+                email: "Email không đúng định dạng",
             }
         },
         submitHandler: () => {
@@ -594,14 +596,10 @@
         }
     })
 
-    $.validator.addMethod("laxEmail", function(value, element) {
-        return this.optional( element ) || /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$/.test( value );
-    }, 'Vui lòng nhập đúng định dạng email');
-
     // validate edit
     page.dialogs.elements.formUpdateCustomer.validate({
         rules: {
-            fullNameUp: {
+            fullnameUp: {
                 required: true,
                 minlength: 5,
             },
@@ -611,19 +609,22 @@
             }
         },
         messages: {
-            fullNameUp: {
-                required: "Vui long nhap ho ten",
-                minlength: "Do dai ho ten phai hon 5 ky tu",
+            fullnameUp: {
+                required: "Tên không được để trống",
+                minlength:"Họ tên có ít nhất 5 kí tự",
             },
             emailUp: {
-                required: "Vui long nhap email",
-                email: "Email khong dung dinh dang",
+                required: "Email không được để trống",
+                email: "Email không đúng định dạng",
             }
         },
         submitHandler: () => {
             updateCustomer();
         }
     })
+    $.validator.addMethod("laxEmail", function(value, element) {
+        return this.optional( element ) || /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$/.test( value );
+    }, 'Vui lòng nhập đúng định dạng email');
 
     // Validate deposit
     page.dialogs.elements.formDeposit.validate({
@@ -635,8 +636,8 @@
         },
         messages: {
             depositDe: {
-                required:"Vui long nhap so tien",
-                min: "Tien khong the be hon 0",
+                required:"Số tiền gửi không được để trống",
+                min: "Số tiền gửi phải lớn hơn 0",
             }
         },
         submitHandler: ()=> {
@@ -647,15 +648,15 @@
     // validate withdraw
     page.dialogs.elements.formWithdraw.validate({
         rules: {
-            transactionAmountWith: {
+            withDrawDe: {
                 required: true,
                 min: 1,
             }
         },
         messages: {
-            transactionAmountWith: {
-                required: "Vui long nhap so tien",
-                min: "So tien khong the be hon 1",
+            withDrawDe: {
+                required: "Số tiền rút không được để trống",
+                min: "Số tiền rút phải lớn hơn 0",
             }
         },
         submitHandler: () => {

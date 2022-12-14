@@ -8,6 +8,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import java.math.BigDecimal;
+import java.util.Scanner;
 
 
 public class CustomerCreateDTO implements Validator {
