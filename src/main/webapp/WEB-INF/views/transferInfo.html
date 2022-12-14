@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="container">
+    <div class="table-title">
+        <div class="row">
+            <div class="col-sm-5">
+                <h1>Transfer money Information</h1>
+            </div>
+            <div class="col-sm-7">
+                <a style=" box-shadow: 0 0 5px 1px whitesmoke;" href="/list" class="btn btn-outline-light">
+                    <i class="fa fa-history" aria-hidden="true"></i>
+                    <span>  List of customers </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <table class="table table-borderless table-hover">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Sender</th>
+                <th>Recipient</th>
+                <th>TransferAmount</th>
+                <th>FeesAmount</th>
+                <th>TransactionAmount</th>
+            </tr>
+            </thead>
+            <tbody>
+            <th:block th:each="item:${transfers}">
+                <tr>
+                    <td th:text="${item.id}"></td>
+                    <td th:text="${item.sender.fullname}"></td>
+                    <td th:text="${item.recipient.fullname}"></td>
+                    <td th:text="${item.transferAmount}"></td>
+                    <td th:text="${item.feesAmount}"></td>
+                    <td th:text="${item.transactionAmount}"></td>
+                </tr>
+            </th:block>
+            </tbody>
+            <tfoot >
+            <tr>
+                <td colspan="5">Total FeesAmout:</td>
+                <td th:text="${total}"></td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h1>Create customers</h1>
+                </div>
+                <div class="col-sm-7">
+                    <a href="/list" class="btn btn-outline-light">
+                        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                        <span>
+                            <i class="fas fa-list"></i>
+                            List of customers
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <form th:object="${customerCreateDTO}" method="post" >
+                <div class="row mt-3">
+                    <div class="col-sm-6">
+                        <label for="fullName" class="form-label"><strong>Full name</strong></label>
+                        <input type="text" id="fullName" name="fullname" class="form-control">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="email" class="form-label"><strong>Email</strong></label>
+                        <input type="text" id="email" name="email"  class="form-control">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-sm-6">
+                        <label for="phone" class="form-label"><strong>Phone</strong></label>
+                        <input type="text" id="phone" name="phone" class="form-control">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="address" class="form-label"><strong>Address</strong></label>
+                        <input type="text" id="address" name="address" class="form-control">
+                        <input type="hidden" name="balance" value="0">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-lg-3">
+                        <button type="submit" class="btn btn-outline-primary">
+                            <i class="fas fa-plus"></i>
+                            Create customer
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <th:block th:if="${success}">
+            <div class="success">
+                <div class="container">
+                    <ul>
+                        <li th:text="${success}"></li>
+                    </ul>
+                </div>
+            </div>
+        </th:block>
+        <th:block th:if="${errors} == true">
+            <div class="alert-danger">
+                <ul>
+                    <li th:each="err : ${#fields.errors('customerCreateDTO.*')}" th:text="${err}"></li>
+                </ul>
+            </div>
+        </th:block>
+    </div>
+
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
