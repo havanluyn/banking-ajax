@@ -235,13 +235,13 @@
                                 <i class="fas fa-pen-square" aria-hidden="true"></i> Edit
                             </button>
 
-                            <button data-id="${obj.id}"  class="btn btn-outline-success showDeposit" title="Deposit">Deposit
+                            <button data-id="${obj.id}"  class="btn btn-outline-success showDeposit" title="Deposit">De
                             </button>
 
-                            <button data-id="${obj.id}" class="btn btn-outline-primary showWithdraw" title="Withdraw">Withdraw
+                            <button data-id="${obj.id}" class="btn btn-outline-primary showWithdraw" title="Withdraw">Wd
                             </button>
 
-                            <button data-id="${obj.id}" class="btn btn-outline-danger delete" title="Delete">Delete
+                            <button data-id="${obj.id}" class="btn btn-outline-danger delete" title="Delete">Del
                             </button>
                         </td>
                     </tr>`
@@ -454,7 +454,7 @@
                 "content-type": "application/json"
             },
             type: "POST",
-            url: "http://localhost:3000/withdraw",
+            url: "http://localhost:8080/withdraw",
             data: JSON.stringify(withdraw)
         })
             .done((data) => {
@@ -489,6 +489,7 @@
             .done((data) => {
                 $(`#tr_${data.id}`).replaceWith(renderCustomer(data))
                 page.dialogs.elements.balanceWith.val("")
+                showUpdateSuccessAlert("Khách hàng "+data.fullname+" vừa rút tiền thành công!!")
                 removeClickEventButton();
                 addClickEventButton();
             })
@@ -523,7 +524,7 @@
                 "content-type": "application/json"
             },
             type: "DELETE",
-            url: "http://localhost:3000/customer/" + id
+            url: page.urls.deleteById+"/" + id
         })
             .done(() => {
                 $(`#tr_${id}`).remove();
@@ -667,7 +668,7 @@
         $("#update-danger").hide();})
     function showUpdateSuccessAlert(message) {
         $("#update-success").show();
-        $("#message").replaceWith(message)
+        $("#message").replaceWith("<p id='message'>"+message+"</p>")
         window.setTimeout(function () {
             $("#update-success").hide();
         }, 3000);

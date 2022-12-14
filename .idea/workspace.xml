@@ -2,31 +2,36 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="listcustomer:war" />
+      <artifact name="ajax-banking:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af99691e-6b73-4dd8-b2c5-90e1f932d6e5" name="Changes" comment="" />
+    <list default="true" id="5f5db29e-3d4a-431f-8c62-7c15c0233096" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/deposit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/withdraw.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/app.base.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/app.base.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="FxmlFile" />
-        <option value="Interface" />
-        <option value="HTML File" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -38,49 +43,40 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2IFIiqvpJ1IjCsEwbiEdESxkRPU" />
+  <component name="ProjectId" id="2IrJpHzXZjbIViKY9Bz0Cawifok" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/Module4/customer-banking/listcustomer&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;900bf70a868ed1d645df08eee3db5568&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Admin/Desktop/Module4/ajax-banking/src/main/webapp/WEB-INF",
+    "spring.configuration.checksum": "94a51a3ab230b02d41ba0206d8616320"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\Desktop\Module4\listcustomer\src\main\java\com\codegym\service" />
-      <recent name="C:\Users\Admin\Desktop\Module4\listcustomer\src\main\java\com\codegym" />
-      <recent name="C:\Users\Admin\Desktop\Module4\listcustomer\src\main\webapp\WEB-INF\views" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.codegym.repository" />
-      <recent name="com.codegym.controller" />
+      <recent name="C:\Users\Admin\Desktop\Module4\ajax-banking\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\Admin\Desktop\Module4\ajax-banking\src\main\webapp" />
+      <recent name="C:\Users\Admin\Desktop\Module4\ajax-banking\src\main" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.68" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.68" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="listcustomer:war">
+        <artifact name="banking-ajax:war">
           <settings>
             <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="7a9481d2-8bc2-4f75-a082-e138bf3d40ef" />
+        <option name="BASE_DIRECTORY_NAME" value="4d284071-9cf6-4541-b5f3-062c2d7d6af3" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -88,7 +84,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51555" />
+        <option name="DEBUG_PORT" value="59387" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -153,7 +149,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="listcustomer:war" />
+          <artifact name="banking-ajax:war" />
         </option>
       </method>
     </configuration>
@@ -161,30 +157,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="af99691e-6b73-4dd8-b2c5-90e1f932d6e5" name="Changes" comment="" />
-      <created>1669771036792</created>
+      <changelist id="5f5db29e-3d4a-431f-8c62-7c15c0233096" name="Changes" comment="" />
+      <created>1670933956627</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1669771036792</updated>
-      <workItem from="1669771038255" duration="1327000" />
-      <workItem from="1669772381935" duration="1570000" />
-      <workItem from="1669773984309" duration="1238000" />
-      <workItem from="1669775237387" duration="4639000" />
-      <workItem from="1669790297122" duration="1263000" />
-      <workItem from="1669857318242" duration="1379000" />
-      <workItem from="1669879502435" duration="2619000" />
-      <workItem from="1669950654417" duration="3914000" />
-      <workItem from="1669954735486" duration="1307000" />
-      <workItem from="1669962616140" duration="2931000" />
-      <workItem from="1670164112749" duration="10027000" />
-      <workItem from="1670202952218" duration="6892000" />
-      <workItem from="1670214189184" duration="6609000" />
-      <workItem from="1670226255547" duration="4020000" />
-      <workItem from="1670291015991" duration="18000" />
-      <workItem from="1670379371518" duration="1842000" />
-      <workItem from="1670550130784" duration="12824000" />
-      <workItem from="1670568277975" duration="2482000" />
-      <workItem from="1670933491375" duration="807000" />
+      <updated>1670933956627</updated>
+      <workItem from="1670933958432" duration="2139000" />
+      <workItem from="1670981386389" duration="23000" />
     </task>
     <servers />
   </component>
@@ -201,12 +180,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo parentTag="com.codegym.model.Transfer" memberName="recipient" />
-      </pinned-members>
-    </pin-to-top-manager>
   </component>
 </project>
