@@ -15,7 +15,7 @@ import java.util.Optional;
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
     List<Customer> findAllByFullnameLikeOrEmailLikeOrPhoneLike(String fullName, String email, String phone);
-
+    List<Customer> findAllByDeletedEquals(Boolean del);
     Optional<Customer> findByEmail(String email);
 
     Optional<Customer> findByEmailAndIdIsNot(String email,Long id);

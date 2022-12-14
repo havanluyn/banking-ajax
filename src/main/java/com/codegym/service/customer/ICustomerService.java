@@ -19,5 +19,6 @@ public interface ICustomerService extends IGeneralService<Customer> {
     List<Customer> findAllAndIdNotExists(Long id);
     Optional<Customer> findByEmail(String email);
     Optional<Customer> findByEmailAndIdIsNot(String email,Long id);
+    List<Customer> findAllByDeletedEquals(Boolean del);
     void transfer(Transfer transfer);
 }

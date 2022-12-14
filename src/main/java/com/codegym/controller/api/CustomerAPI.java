@@ -19,7 +19,7 @@ public class CustomerAPI {
     @GetMapping
     public ResponseEntity<List<Customer>> getAllCustomers() {
 
-        List<Customer> customers = customerService.findAll();
+        List<Customer> customers = customerService.findAllByDeletedEquals(false);
 
         if (customers.size() == 0) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -105,7 +105,9 @@ public class CustomerAPI {
 
     @DeleteMapping("/{customerId}")
     public ResponseEntity<Customer> delete( @PathVariable Long customerId) {
-        customerService.deleteById(customerId);
+        Customer customer= customerService.findById(customerId).get();
+        customer.setDeleted(true);
+        customerService.save(customer);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

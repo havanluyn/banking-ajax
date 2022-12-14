@@ -34,6 +34,9 @@ public class CustomerServiceImpl implements ICustomerService {
     public Optional<Customer> findByEmailAndIdIsNot(String email,Long id){
         return customerRepository.findByEmailAndIdIsNot(email,id);
     };
+    public List<Customer> findAllByDeletedEquals(Boolean del){
+        return customerRepository.findAllByDeletedEquals(del);
+    };
     @Override
     public List<Customer> findAllByFullNameLikeOrEmailLikeOrPhoneLike(String fullName, String email, String phone) {
         return customerRepository.findAllByFullnameLikeOrEmailLikeOrPhoneLike(fullName, email, phone);

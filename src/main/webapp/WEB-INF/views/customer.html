@@ -526,7 +526,7 @@
                 "content-type": "application/json"
             },
             type: "DELETE",
-            url: page.urls.deleteById+"/" + id
+            url: page.urls.deleteById+ "/" + id
         })
             .done(() => {
                 $(`#tr_${id}`).remove();

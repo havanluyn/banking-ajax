@@ -11,14 +11,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5f5db29e-3d4a-431f-8c62-7c15c0233096" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/controller/api/DepositAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/api/DepositAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/model/dto/CustomerCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/dto/CustomerCreateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/controller/api/CustomerAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/api/CustomerAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/repository/CustomerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/service/customer/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/customer/CustomerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/service/customer/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/customer/ICustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/service/deposit/DepositServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/deposit/DepositServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,15 +49,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Admin/Desktop/Module4/ajax-banking/src/main/webapp/WEB-INF",
-    "spring.configuration.checksum": "94a51a3ab230b02d41ba0206d8616320"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/Module4/ajax-banking/src/main/webapp/WEB-INF&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;94a51a3ab230b02d41ba0206d8616320&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Desktop\Module4\ajax-banking\src\main\webapp\WEB-INF" />
@@ -187,7 +185,8 @@
       <option name="presentableId" value="Default" />
       <updated>1670933956627</updated>
       <workItem from="1670933958432" duration="2139000" />
-      <workItem from="1670981386389" duration="8928000" />
+      <workItem from="1670981386389" duration="11482000" />
+      <workItem from="1670999695417" duration="541000" />
     </task>
     <servers />
   </component>
